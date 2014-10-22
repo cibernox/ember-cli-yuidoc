@@ -1,25 +1,16 @@
 # Ember-cli-yuidoc
 
-This README outlines the details of collaborating on this Ember addon.
+This is an ember-cli addon for generate html documentation from YUIDoc comments in the source code
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Just `npm install --save-dev ember-cli-yuidoc`
 
 ## Running
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+This addon adds a new `yuidoc` command to ember-cli. To generate the documentation just run `ember yuidoc`
+Documentation is generated in the `/docs` folder.
 
 ## Running Tests
 
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+No tests yet
