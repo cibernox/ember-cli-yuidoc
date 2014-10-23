@@ -19,7 +19,7 @@
   "dependencies": {
     "execSync": "^1.0.2",
     "yuidocjs": "^0.3.50",
-    "ember-cli-calculate-version": "git://github.com/cibernox/ember-cli-calculate-version.git#master"
+    "ember-cli-calculate-version": "0.0.1"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
