@@ -16,3 +16,7 @@ Documentation is generated in the `/docs` folder by default. You might want to a
 ## Running Tests
 
 No tests yet
+
+## TODOS
+
+* Allow to pass parameters to `ember yuidoc` and forward them to the `yuidoc` executable.
