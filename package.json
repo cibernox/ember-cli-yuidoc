@@ -17,7 +17,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "execSync": "^1.0.2"
+    "execSync": "^1.0.2",
+    "yuidocjs": "^0.3.50"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
@@ -31,8 +32,7 @@
     "ember-data": "1.0.0-beta.10",
     "ember-export-application-global": "^1.0.0",
     "express": "^4.8.5",
-    "glob": "^4.0.5",
-    "yuidocjs": "^0.3.50"
+    "glob": "^4.0.5"
   },
   "keywords": [
     "ember-addon",
