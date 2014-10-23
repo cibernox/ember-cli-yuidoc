@@ -14,7 +14,7 @@ module.exports = {
         outdir: "docs"
       }
     };
-    if (pkginfo.keywords.indexOf('ember-addon') !== -1){
+    if (pkginfo.keywords && pkginfo.keywords.indexOf('ember-addon') !== -1){
       console.log("Generating yuidoc.json for ember-addon named " + config.name);
       config.options.paths.push("addon");
     } else {
