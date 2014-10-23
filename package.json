@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-yuidoc",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -19,7 +19,7 @@
   "dependencies": {
     "execSync": "^1.0.2",
     "yuidocjs": "^0.3.50",
-    "ember-cli-calculate-version": "0.0.1"
+    "calculate-version": "0.0.1"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
