@@ -7,4 +7,13 @@ module.exports = {
       'yuidoc': require('./lib/commands/yuidoc')
     }
   },
+
+  serverMiddleware: function(config) {
+    var app = config.app;
+    console.log('registring middleware...');
+    app.use('/docs', function(request, response, next) {
+      console.log('docs middleware invoked');
+      response.send("Hello world");
+    });
+  }
 };
