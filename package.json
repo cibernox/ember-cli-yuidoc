@@ -21,6 +21,11 @@
     "yuidocjs": "^0.3.50",
     "git-repo-version": "0.0.1"
   },
+  "before": [
+    "serve-files-middleware",
+    "history-support-middleware",
+    "proxy-server-middleware"
+  ],
   "devDependencies": {
     "body-parser": "^1.2.0",
     "broccoli-asset-rev": "0.3.1",
