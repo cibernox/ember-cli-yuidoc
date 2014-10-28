@@ -1,19 +1,28 @@
 'use strict';
 
+var YuidocCompiler = require('broccoli-yuidoc');
+var mergeTrees = require('broccoli-merge-trees');
+
 module.exports = {
   name: 'ember-cli-yuidoc',
+  treeForApp: function(tree){
+    debugger;
+    var yuidocTree = new YuidocCompiler(tree, {
+      srcDir: '/',
+      destDir: '/docs',
+      yuidoc: {}
+    });
+
+    this.yuidocTree = yuidocTree;
+  },
+
+  postprocessTree: function(type, workingTree){
+    return mergeTrees([workingTree, this.yuidocTree]);
+  },
+
   includedCommands: function() {
     return {
       'yuidoc': require('./lib/commands/yuidoc')
     }
-  },
-
-  serverMiddleware: function(config) {
-    var app = config.app;
-    console.log('registring middleware...');
-    app.use('/docs', function(request, response, next) {
-      console.log('docs middleware invoked!!!');
-      response.send("Hello world");
-    });
   }
 };
