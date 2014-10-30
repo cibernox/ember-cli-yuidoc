@@ -2,13 +2,12 @@
 
 var YuidocCompiler = require('broccoli-yuidoc');
 var mergeTrees = require('broccoli-merge-trees');
-var fs = require('fs');
 
 module.exports = {
   name: 'ember-cli-yuidoc',
 
   postprocessTree: function(type, workingTree) {
-    var codeFolder = fs.existsSync('addon') ? 'addon' : 'app';
+    var codeFolder = this.app.constructor.name === 'EmberAddon' ? 'addon' : 'app';
 
     var yuidocTree = new YuidocCompiler(codeFolder, {
       srcDir: '/',
@@ -17,6 +16,10 @@ module.exports = {
     });
 
     return mergeTrees([workingTree, yuidocTree]);
+  },
+
+  included: function(app){
+    this.app = app;
   },
 
   includedCommands: function() {
