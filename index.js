@@ -7,8 +7,11 @@ module.exports = {
   name: 'ember-cli-yuidoc',
 
   postprocessTree: function(type, workingTree) {
-    var codeFolder = this.app.constructor.name === 'EmberAddon' ? 'addon' : 'app';
+    if (this.app.env !== 'development' || type !== 'all'){
+      return workingTree;
+    }
 
+    var codeFolder = this.app.constructor.name === 'EmberAddon' ? 'addon' : 'app';
     var yuidocTree = new YuidocCompiler(codeFolder, {
       srcDir: '/',
       destDir: '/docs',
