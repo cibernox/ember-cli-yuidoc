@@ -19,7 +19,9 @@
   "dependencies": {
     "execSync": "^1.0.2",
     "yuidocjs": "^0.3.50",
-    "git-repo-version": "0.0.1"
+    "git-repo-version": "0.0.1",
+    "broccoli-merge-trees": "0.2.1",
+    "broccoli-yuidoc": "https://github.com/cibernox/broccoli-yuidoc.git#master"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
@@ -40,6 +42,9 @@
     "yuidoc"
   ],
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "before": [
+      "history-support-middleware"
+    ]
   }
 }
