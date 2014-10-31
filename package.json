@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-yuidoc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -21,7 +21,7 @@
     "yuidocjs": "^0.3.50",
     "git-repo-version": "0.0.1",
     "broccoli-merge-trees": "0.2.1",
-    "broccoli-yuidoc": "https://github.com/cibernox/broccoli-yuidoc.git#master"
+    "broccoli-yuidoc-fork": "1.4.0"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
