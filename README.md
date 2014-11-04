@@ -22,4 +22,3 @@ No tests yet
 ## TODOS
 
 * Allow to pass parameters to `ember yuidoc` and forward them to the `yuidoc` executable.
-* Add a middleware to ember-cli that exposes the documentation in `/docs` (like tests are exposed in `/tests`)
