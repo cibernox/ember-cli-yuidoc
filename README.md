@@ -23,3 +23,4 @@ No tests yet
 
 * Allow to pass parameters to `ember yuidoc` and forward them to the `yuidoc` executable.
 * Allow to customize the folder where the code lives (right now only `addon` and `app`).
+* Allow to opt-out to live doc generation in `ember serve`
