@@ -22,3 +22,4 @@ No tests yet
 ## TODOS
 
 * Allow to pass parameters to `ember yuidoc` and forward them to the `yuidoc` executable.
+* Allow to customize the folder where the code lives (right now only `addon` and `app`).
