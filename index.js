@@ -1,6 +1,6 @@
 'use strict';
 
-var YuidocCompiler = require('broccoli-yuidoc-fork');
+var YuidocCompiler = require('broccoli-yuidoc');
 var mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
