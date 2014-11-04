@@ -13,6 +13,8 @@ automatically with `ember g yuidoc`.
 This addon adds a new `yuidoc` command to ember-cli. To generate the documentation just run `ember yuidoc`
 Documentation is generated in the `/docs` folder by default. You might want to add this folder to the gitignore.
 
+Also, for live updating, when you run `ember serve` you can visit the `/docs` url to see it.
+
 ## Running Tests
 
 No tests yet
