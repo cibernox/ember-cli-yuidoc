@@ -14,14 +14,14 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Miguel Camba",
   "license": "MIT",
   "dependencies": {
-    "execSync": "^1.0.2",
     "yuidocjs": "^0.3.50",
     "git-repo-version": "0.0.1",
     "broccoli-merge-trees": "0.2.1",
-    "broccoli-yuidoc": "2.0.0"
+    "broccoli-yuidoc": "2.0.0",
+    "rsvp": "3.0.14"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
