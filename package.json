@@ -21,7 +21,7 @@
     "yuidocjs": "^0.3.50",
     "git-repo-version": "0.0.1",
     "broccoli-merge-trees": "0.2.1",
-    "broccoli-yuidoc-fork": "1.4.0"
+    "broccoli-yuidoc": "2.0.0"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
