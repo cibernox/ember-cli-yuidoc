@@ -1,8 +1,8 @@
 'use strict';
 
 var YuidocCompiler = require('./lib/broccoli-yuidoc');
+var optsGenerator  = require('./lib/options');
 var mergeTrees     = require('broccoli-merge-trees');
-var fs             = require('fs');
 
 module.exports = {
   name: 'ember-cli-yuidoc',
@@ -12,17 +12,9 @@ module.exports = {
       return workingTree;
     }
 
-    // var config;
-    // try {
-    //   var buffer = fs.readFileSync('yuidoc.json');
-    //   config = JSON.parse(buffer);
-    // } catch(e){
-    //   console.log("No yuidoc.json file in root folder. Run `ember g yuidoc` to generate one.");
-    //   process.exit(1);
-    // }
+    var config = optsGenerator.generate();
 
-    var yuidocTree = new YuidocCompiler(config.options.paths);
-
+    var yuidocTree = new YuidocCompiler(config.paths, config);
     return mergeTrees([workingTree, yuidocTree]);
   },
 
