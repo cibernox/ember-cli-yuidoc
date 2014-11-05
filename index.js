@@ -1,7 +1,8 @@
 'use strict';
 
 var YuidocCompiler = require('broccoli-yuidoc');
-var mergeTrees = require('broccoli-merge-trees');
+var mergeTrees     = require('broccoli-merge-trees');
+var fs             = require('fs');
 
 module.exports = {
   name: 'ember-cli-yuidoc',
@@ -11,18 +12,29 @@ module.exports = {
       return workingTree;
     }
 
-    var codeFolder = this.app.constructor.name === 'EmberAddon' ? 'addon' : 'app';
-    var yuidocTree = new YuidocCompiler(codeFolder, {
+    var config;
+    try {
+      var buffer = fs.readFileSync('yuidoc.json');
+      config = JSON.parse(buffer);
+    } catch(e){
+      console.log("No yuidoc.json file in root folder. Run `ember g yuidoc` to generate one.");
+      process.exit(1);
+    }
+
+    var inputTree = mergeTrees(config.options.paths);
+
+    var yuidocTree = new YuidocCompiler(inputTree, {
       srcDir: '/',
       destDir: '/docs',
-      yuidoc: {}
+      yuidoc: {
+        linkNatives: true,
+        quiet: true,
+        parseOnly: false,
+        lint: false
+      }
     });
 
     return mergeTrees([workingTree, yuidocTree]);
-  },
-
-  included: function(app){
-    this.app = app;
   },
 
   includedCommands: function() {
