@@ -21,9 +21,7 @@ module.exports = {
       process.exit(1);
     }
 
-    var inputTree = mergeTrees(config.options.paths);
-
-    var yuidocTree = new YuidocCompiler(inputTree, {
+    var yuidocTree = new YuidocCompiler(config.options.paths, {
       srcDir: '/',
       destDir: '/docs',
       yuidoc: {
