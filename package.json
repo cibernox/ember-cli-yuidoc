@@ -17,11 +17,13 @@
   "author": "Miguel Camba",
   "license": "MIT",
   "dependencies": {
-    "yuidocjs": "^0.3.50",
-    "git-repo-version": "0.0.1",
+    "broccoli-caching-writer": "~0.5.2",
     "broccoli-merge-trees": "0.2.1",
-    "broccoli-yuidoc": "2.0.0",
-    "rsvp": "3.0.14"
+    "broccoli-merge-trees": "~0.2.1",
+    "git-repo-version": "0.0.1",
+    "merge": "~1.2.0",
+    "rsvp": "3.0.14",
+    "yuidocjs": "^0.3.50"
   },
   "devDependencies": {
     "body-parser": "^1.2.0",
