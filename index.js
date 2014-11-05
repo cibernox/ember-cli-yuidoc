@@ -8,7 +8,7 @@ module.exports = {
   name: 'ember-cli-yuidoc',
 
   postprocessTree: function(type, workingTree) {
-    if (this.app.env !== 'development' || type !== 'all'){
+    if (this.app.env !== 'development' || type !== 'all' || !this.liveDocsEnabled){
       return workingTree;
     }
 
@@ -16,6 +16,11 @@ module.exports = {
 
     var yuidocTree = new YuidocCompiler(config.paths, config);
     return mergeTrees([workingTree, yuidocTree]);
+  },
+
+  included: function(){
+    var cmdOpts = process.argv.slice(3);
+    this.liveDocsEnabled = cmdOpts.indexOf('--docs') !== -1
   },
 
   includedCommands: function() {
