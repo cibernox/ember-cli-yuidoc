@@ -42,9 +42,6 @@
     "yuidoc"
   ],
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "before": [
-      "history-support-middleware"
-    ]
+    "configPath": "tests/dummy/config"
   }
 }
