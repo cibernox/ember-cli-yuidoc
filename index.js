@@ -11,11 +11,7 @@ module.exports = {
     if (this.app.env !== 'development' || type !== 'all' || !this.liveDocsEnabled){
       return workingTree;
     }
-
-    var config = optsGenerator.generate();
-
-    var yuidocTree = new YuidocCompiler(config.paths, config);
-    return mergeTrees([workingTree, yuidocTree]);
+    return this.addDocsToTree(workingTree);
   },
 
   included: function(){
@@ -27,5 +23,12 @@ module.exports = {
     return {
       'yuidoc': require('./lib/commands/yuidoc')
     }
+  },
+
+  addDocsToTree: function(inputTree){
+    var config = optsGenerator.generate();
+
+    var yuidocTree = new YuidocCompiler(config.paths, config);
+    return mergeTrees([inputTree, yuidocTree]);
   }
 };
