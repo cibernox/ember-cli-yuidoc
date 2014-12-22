@@ -7,7 +7,7 @@ This is an ember-cli addon for generate html documentation from YUIDoc comments 
 Just `npm install --save-dev ember-cli-yuidoc`.
 
 This plugin expects to find a `yuidoc.json` manifest on the root of your project, but also includes a blueprint to
-generate it for you un a breeze. 
+generate it for you in a breeze. 
 
 Just run `ember g yuidoc` and one will be created in your project's root with some sensitive defaults.
 
