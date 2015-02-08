@@ -21,7 +21,7 @@ module.exports = {
 
   includedCommands: function() {
     return {
-      'yuidoc': require('./lib/commands/yuidoc')
+      'ember-cli-yuidoc': require('./lib/commands/yuidoc')
     }
   },
 
