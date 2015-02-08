@@ -1,3 +1,7 @@
+## 0.5.3
+
+* Fix require inexistent file
+
 ## 0.5.2
 
 * Renable the blueprint to `ember generate ember-cli-yuidoc`. With this change, the addon can be installed with
