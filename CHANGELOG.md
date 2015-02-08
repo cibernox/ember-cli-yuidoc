@@ -1,4 +1,4 @@
-## 0.5.1
+## 0.5.2
 
 * Renable the blueprint to `ember generate ember-cli-yuidoc`. With this change, the addon can be installed with
 `ember install:addon ember-cli-yuidoc` and the generator will be invoked automatically.
