@@ -15,9 +15,9 @@ once with some sensitive defaults.
 
 ### As an ember command
 
-This addon adds a new `yuidoc` command to ember-cli to generate the documentation on demand. 
+This addon adds a new `ember-cli-yuidoc` command to ember-cli to generate the documentation on demand. 
 
-Just run `ember yuidoc` and yours docs will apear in your output directory (`/docs` by default).
+Just run `ember ember-cli-yuidoc` and your docs will apear in your output directory (`/docs` by default).
 You probably want to add this folder to the `.gitignore`.
 
 ### Watch mode
