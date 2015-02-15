@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-yuidoc",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "directories": {
     "doc": "doc",
     "test": "tests"

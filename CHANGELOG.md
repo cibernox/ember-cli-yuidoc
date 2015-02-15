@@ -1,3 +1,7 @@
+## 0.5.4
+
+* Read external data from yuidoc.json
+
 ## 0.5.3
 
 * Fix require inexistent file
