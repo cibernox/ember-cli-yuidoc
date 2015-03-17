@@ -1,3 +1,11 @@
+## 0.6.1
+
+* [BUGFIX] Fix problem that made ember-cli fail if there is not internet conection. 
+
+## 0.6.0
+
+* Update to yuidoc 0.6
+
 ## 0.5.4
 
 * Read external data from yuidoc.json
