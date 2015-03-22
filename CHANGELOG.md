@@ -1,3 +1,7 @@
+## 0.6.2
+
+* [ENHALCEMENT] Take version number from package.json, fallback to git version.
+
 ## 0.6.1
 
 * [BUGFIX] Fix problem that made ember-cli fail if there is not internet conection. 
