@@ -22,7 +22,7 @@
     "broccoli-merge-trees": "0.2.1",
     "git-repo-version": "0.2.0",
     "rsvp": "3.0.14",
-    "yuidocjs": "^0.7.0"
+    "yuidocjs": "^0.8.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
