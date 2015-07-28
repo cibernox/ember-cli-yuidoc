@@ -1,3 +1,7 @@
+## 0.7.3
+
+* [ENHALCEMENT] Update to YUIDOC 0.8
+
 ## 0.6.2
 
 * [ENHALCEMENT] Take version number from package.json, fallback to git version.
