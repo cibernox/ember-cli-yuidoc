@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-yuidoc",
-  "version": "0.7.4",
+  "version": "0.8.0",
   "description": "Generate documentation of your app/addon from your yuidoc comments",
   "directories": {
     "doc": "doc",
