@@ -12,12 +12,10 @@ module.exports = {
         paths: [],
         exclude: "vendor",
         outdir: "docs",
-        yuidoc: {
-          linkNatives: true,
-          quiet: true,
-          parseOnly: false,
-          lint: false
-        }
+        linkNatives: true,
+        quiet: true,
+        parseOnly: false,
+        lint: false
       }
     };
     if (pkginfo.keywords && pkginfo.keywords.indexOf('ember-addon') !== -1){
