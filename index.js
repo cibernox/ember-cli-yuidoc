@@ -8,26 +8,29 @@ module.exports = {
   name: 'ember-cli-yuidoc',
 
   postprocessTree: function(type, workingTree) {
-    if (this.app.env !== 'development' || type !== 'all' || !this.liveDocsEnabled){
-      return workingTree;
+    if(type === 'all') {
+      var env = this.app.env;
+      var config = optsGenerator.generate();
+
+      if((this.liveDocsEnabled && env === 'development') || (env === 'production' || config.buildInProduction === true)) {
+        return this.addDocsToTree(workingTree, config);
+      }
     }
-    return this.addDocsToTree(workingTree);
+    return workingTree;
   },
 
   included: function(){
     var cmdOpts = process.argv.slice(3);
-    this.liveDocsEnabled = cmdOpts.indexOf('--docs') !== -1
+    this.liveDocsEnabled = cmdOpts.indexOf('--docs') !== -1;
   },
 
   includedCommands: function() {
     return {
       'ember-cli-yuidoc': require('./lib/commands/ember-cli-yuidoc')
-    }
+    };
   },
 
-  addDocsToTree: function(inputTree){
-    var config = optsGenerator.generate();
-
+  addDocsToTree: function(inputTree, config){
     var yuidocTree = new YuidocCompiler(config.paths, config);
     return mergeTrees([inputTree, yuidocTree]);
   }
