@@ -12,7 +12,7 @@ module.exports = {
       var env = this.app.env;
       var config = optsGenerator.generate();
 
-      if((this.liveDocsEnabled && env === 'development') || (env === 'production' || config.buildInProduction === true)) {
+      if((this.liveDocsEnabled && env === 'development') || (config.enabledEnvironments && config.enabledEnvironments.indexOf(env) !== -1)) {
         return this.addDocsToTree(workingTree, config);
       }
     }
