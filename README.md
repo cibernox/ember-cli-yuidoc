@@ -28,6 +28,22 @@ The documentation will update when you modify your code, as expected.
 While this is specially useful if your are editing your documentation, it adds some overhead to your build pipeline,
 so this is disabled by default. Run `ember serve --docs` to enable it.
 
+### Environment specific generation
+
+This plugin supports the ability to force generate your documentation via the `enabledEnvironments` option that may be defined in your `yuidoc.json`.
+
+```json
+{
+  "name": "sample-app",
+  "version": "1.2.3",
+  "options": {
+    "enabledEnvironments": ["development", "production"]
+  }
+}
+```
+
+This will generate your documentation when using `ember build` `ember build --environment=production` `ember s` and so on without needing to use `--docs`.
+
 ## Like coffescript? It's ok.
 
 The plugin supports coffescript out of the box. In your application's `yuidoc.json` you can configure
