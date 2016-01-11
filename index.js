@@ -11,8 +11,7 @@ module.exports = {
     if(type === 'all') {
       var env = this.app.env;
       var config = optsGenerator.generate();
-
-      if((this.liveDocsEnabled && env === 'development') || (config.enabledEnvironments && config.enabledEnvironments.indexOf(env) !== -1)) {
+      if(this.serveDocs || (config.enabledEnvironments && config.enabledEnvironments.indexOf(env) !== -1)) {
         return this.addDocsToTree(workingTree, config);
       }
     }
@@ -20,14 +19,12 @@ module.exports = {
   },
 
   included: function(){
-    var cmdOpts = process.argv.slice(3);
-    this.liveDocsEnabled = cmdOpts.indexOf('--docs') !== -1;
+    var cmdOpts = process.argv.slice(2);
+    this.serveDocs = cmdOpts.indexOf('yuidoc:serve') !== -1;
   },
 
   includedCommands: function() {
-    return {
-      'ember-cli-yuidoc': require('./lib/commands/ember-cli-yuidoc')
-    };
+    return require('./lib/commands');
   },
 
   addDocsToTree: function(inputTree, config){

@@ -13,20 +13,20 @@ once with some sensitive defaults.
 
 ##  Usage
 
-### As an ember command
+### Building
 
-This addon adds a new `ember-cli-yuidoc` command to ember-cli to generate the documentation on demand. 
+This addon adds a new `yuidoc` command to ember-cli to generate the documentation on demand. 
 
-Just run `ember ember-cli-yuidoc` and your docs will apear in your output directory (`/docs` by default).
+Just run `ember yuidoc:build` and your docs will apear in your output directory (`/docs` by default).
 You probably want to add this folder to the `.gitignore`.
 
-### Watch mode
+### Serving
 
 This plugin also integrates with the ember server, so you can access your docs from the browser in the `/docs` urls.
 The documentation will update when you modify your code, as expected. 
 
 While this is specially useful if your are editing your documentation, it adds some overhead to your build pipeline,
-so this is disabled by default. Run `ember serve --docs` to enable it.
+so this is disabled by default. Run `ember yuidoc:serve` to enable it.
 
 ### Environment specific generation
 
