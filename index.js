@@ -10,10 +10,10 @@ module.exports = {
   postprocessTree: function(type, workingTree) {
     if(type === 'all') {
       var env = this.app.env;
-      var config = optsGenerator.generate();
+      var config = optsGenerator.load();
 
       if((this.liveDocsEnabled && env === 'development') || (config.enabledEnvironments && config.enabledEnvironments.indexOf(env) !== -1)) {
-        return this.addDocsToTree(workingTree, config);
+        return this.addDocsToTree(workingTree, optsGenerator.generate(config));
       }
     }
     return workingTree;
