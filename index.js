@@ -32,6 +32,6 @@ module.exports = {
 
   addDocsToTree: function(inputTree, config){
     var yuidocTree = new YuidocCompiler(config.paths, config);
-    return mergeTrees([inputTree, yuidocTree]);
+    return mergeTrees([inputTree, yuidocTree], { overwrite: true });
   }
 };
