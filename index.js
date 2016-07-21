@@ -12,7 +12,8 @@ module.exports = {
       var env = this.app.env;
       var config = optsGenerator.load();
 
-      if((this.liveDocsEnabled && env === 'development') || (config.enabledEnvironments && config.enabledEnvironments.indexOf(env) !== -1)) {
+      if((this.liveDocsEnabled && env === 'development') ||
+       (config.options && config.options.enabledEnvironments && config.options.enabledEnvironments.indexOf(env) !== -1)) {
         return this.addDocsToTree(workingTree, optsGenerator.generate(config));
       }
     }
