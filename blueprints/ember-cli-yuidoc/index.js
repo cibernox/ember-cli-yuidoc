@@ -9,6 +9,18 @@ module.exports = {
       description: pkginfo.description,
       version: pkginfo.version,
       options: {
+        "external": {
+          "data": [
+            {
+              "base": "http://emberjs.com/api/",
+              "json": "http://builds.emberjs.com/tags/v2.8.2/ember-docs.json"
+            },
+            {
+              "base": "http://emberjs.com/api/data/",
+              "json": "http://builds.emberjs.com/tags/v2.8.0/ember-data-docs.json"
+            }
+          ]
+        },
         paths: [],
         exclude: "vendor",
         outdir: "docs",
