@@ -62,3 +62,6 @@ the `syntaxtype` and `extension` like this:
   }
 }
 ```
+
+## Theme
+Like to use a different theme?, Checkout [yuidoc-ember-theme](https://github.com/offirgolan/yuidoc-ember-theme)
