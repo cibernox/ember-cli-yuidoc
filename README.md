@@ -4,7 +4,7 @@ This is an ember-cli addon for generate html documentation from YUIDoc comments 
 
 ## Installation
 
-If you're using ember-cli > 0.1.5, you can just run `ember install:addon ember-cli-yuidoc` and you're done.
+If you're using ember-cli > 0.1.5, you can just run `ember install ember-cli-yuidoc` and you're done.
 
 If you are using an older version, first install the addon from npm with `npm install --save-dev ember-cli-yuidoc`.
 
