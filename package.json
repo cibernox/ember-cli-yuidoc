@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-yuidoc",
-  "version": "0.8.7",
+  "version": "0.8.8",
   "description": "Generate documentation of your app/addon from your yuidoc comments",
   "directories": {
     "doc": "doc",
@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/cibernox/ember-cli-yuidoc",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.0.0"
   },
   "author": "Miguel Camba",
   "license": "MIT",
