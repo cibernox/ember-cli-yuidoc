@@ -9,7 +9,7 @@ If you're using ember-cli > 0.1.5, you can just run `ember install ember-cli-yui
 If you are using an older version, first install the addon from npm with `npm install --save-dev ember-cli-yuidoc`.
 
 Then, you need to add a `yuidoc.json` manifest on the root of your project. Run `ember g ember-cli-yuidoc` to generate
-once with some sensitive defaults.
+once with some sensible defaults.
 
 ##  Usage
 
