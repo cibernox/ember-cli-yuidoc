@@ -23,10 +23,10 @@ You probably want to add this folder to the `.gitignore`.
 ### Watch mode
 
 This plugin also integrates with the ember server, so you can access your docs from the browser in the `/docs` urls.
-The documentation will update when you modify your code, as expected. 
+The documentation will update when your code is modified. 
 
 While this is specially useful if your are editing your documentation, it adds some overhead to your build pipeline,
-so this is disabled by default. Run `ember serve --docs` to enable it.
+so this is disabled by default. Run `ember serve --docs` to enable it. Then visit http://localhost:4200/docs/index.html to view the documentations. 
 
 ### Environment specific generation
 
